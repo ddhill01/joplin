@@ -225,7 +225,7 @@ export default class Tag extends BaseItem {
 
 		if (options.userSideValidation) {
 			if ('title' in o) {
-				o.title = o.title.trim().toLowerCase();
+				///o.title = o.title.trim().toLowerCase();
 
 				const existingTag = await Tag.loadByTitle(o.title);
 				if (existingTag && existingTag.id !== o.id) throw new Error(_('The tag "%s" already exists. Please choose a different name.', o.title));
